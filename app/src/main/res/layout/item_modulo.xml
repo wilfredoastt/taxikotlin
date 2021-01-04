@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/margin_five"
+    app:cardUseCompatPadding="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:padding="@dimen/margin_five"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="@string/menu_emergencias"
+            android:id="@+id/text_name"
+            android:textStyle="bold"
+            android:paddingTop="@dimen/margin_five"
+            android:paddingRight="@dimen/margin_five"
+            android:paddingLeft="@dimen/margin_five"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:text="hola esto es la direccion"
+            android:id="@+id/text_direction"
+            android:padding="@dimen/margin_five"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/button_phone_free"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_local_phone_black_24dp"
+                style="?attr/selectableItemBackgroundBorderless"/>
+            <Button
+                android:id="@+id/button_phone"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/colorBlue"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_phone_white_24dp"
+                style="?attr/selectableItemBackgroundBorderless"/>
+            <Button
+                android:id="@+id/button_whatsapp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_whatsapp"
+                android:backgroundTint="@color/colorGreenWhatsapp"
+                android:textColor="@android:color/white"
+                style="?attr/selectableItemBackgroundBorderless"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+

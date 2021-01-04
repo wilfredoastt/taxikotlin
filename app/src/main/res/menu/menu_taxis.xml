@@ -1,0 +1,40 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.home.MainActivity">
+    <item
+        android:id="@+id/item_todos"
+        android:orderInCategory="100"
+        android:title="@string/todos"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/item_este"
+        android:orderInCategory="100"
+        android:title="@string/este"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/item_oeste"
+        android:orderInCategory="100"
+        android:title="@string/oeste"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/item_norte"
+        android:orderInCategory="100"
+        android:title="@string/norte"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/item_sud"
+        android:orderInCategory="100"
+        android:title="@string/sud"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/item_quillacollo"
+        android:orderInCategory="100"
+        android:title="@string/quillacollo"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/item_sacaba"
+        android:orderInCategory="100"
+        android:title="@string/sacaba"
+        app:showAsAction="never" />
+</menu>
