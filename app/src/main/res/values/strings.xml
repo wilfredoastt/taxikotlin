@@ -11,6 +11,7 @@
     <string name="menu_modulos">Módulos Policiales</string>
     <string name="menu_emergencias">Teléfonos de Emergencia</string>
     <string name="menu_taxis">Radio Taxis</string>
+    <string name="menu_incidentes">Incidentes</string>
 
     <string name="neighborhood">Barrios</string>
     <string name="direction">Dirección</string>
@@ -23,4 +24,21 @@
     <string name="quillacollo">Quillacollo</string>
     <string name="sacaba">Sacaba</string>
 
+    <!--String para INCIDENTES-->
+    <string name="incidentes">Incidentes</string>
+    <string name="incidente">Incidente</string>
+    <string name="direction_inc">Dirección:</string>
+    <string name="date_inc">Fecha y Hora:</string>
+
+    <string name="cancelado_inc">Cancelado</string>
+    <string name="motive_inc_can">Motivo:</string>
+    <string name="detail_inc_can">Detalle:</string>
+    <string name="activo_inc">Activo</string>
+
+    <string name="button_cancelar">Cancelar</string>
+    <string name="button_registrar">Registrar</string>
+    <string name="alarma">Alarma</string>
+    <string name="alarma_real">Real</string>
+    <string name="alarma_falso">Falso</string>
+    <string name="error_info">Ocurrió algún error...</string>
 </resources>

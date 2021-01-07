@@ -15,7 +15,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
-import com.example.taxi.ui.taxis.Taxi
 import com.example.taxikotlin.R
 
 import org.json.JSONException

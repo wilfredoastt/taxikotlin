@@ -28,4 +28,10 @@
         android:name="com.example.taxikotlin.ui.taxis.TaxisFragment"
         android:label="@string/menu_taxis"
         tools:layout="@layout/fragment_taxis" />
+
+    <fragment
+        android:id="@+id/nav_incidentes"
+        android:name="com.example.taxikotlin.ui.incidentes.IncidentesFragment"
+        android:label="@string/menu_incidentes"
+        tools:layout="@layout/fragment_incidentes" />
 </navigation>

@@ -10,7 +10,6 @@ import android.widget.ImageView
 import android.widget.TextView
 
 import androidx.recyclerview.widget.RecyclerView
-import com.example.taxi.ui.taxis.Taxi
 import com.example.taxikotlin.R
 import com.squareup.picasso.Picasso
 

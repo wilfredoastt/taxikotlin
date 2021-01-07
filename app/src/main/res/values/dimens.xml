@@ -7,6 +7,10 @@
     <dimen name="fab_margin">16dp</dimen>
 
     <dimen name="size_title">25dp</dimen>
+    <dimen name="sizeTitle18">18dp</dimen>
+    <dimen name="margin_eight">8dp</dimen>
     <dimen name="margin_five">5dp</dimen>
     <dimen name="margin_two">2dp</dimen>
+    <dimen name="sizeButton">40dp</dimen>
+    <dimen name="sizeButtonHeight">50dp</dimen>
 </resources>
