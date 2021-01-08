@@ -19,9 +19,21 @@
             android:textStyle="bold"
             android:textColor="@android:color/black"
             android:textSize="@dimen/size_title"
-            android:padding="@dimen/margin_five"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/text_distance"
+            android:text="200044 m"
+            android:background="@drawable/switch_thumb_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/margin_five"
+            android:paddingBottom="@dimen/margin_five"
+            android:paddingLeft="@dimen/fab_margin"
+            android:paddingRight="@dimen/fab_margin"
+            android:layout_marginBottom="@dimen/margin_two"
+            android:layout_gravity="right"
+            android:textAlignment="center" />
         <ImageView
             android:id="@+id/image_view"
             android:layout_width="match_parent"

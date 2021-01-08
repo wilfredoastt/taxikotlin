@@ -1,6 +1,8 @@
 package com.example.taxikotlin.ui.taxis
 
+import android.location.Location
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuInflater
@@ -74,7 +76,11 @@ class TaxisFragment : Fragment() {
                     val direccion:String = objectResult.getString("Direccion")
                     val telefono:String = objectResult.getString("Telefono")
                     val whatsapp:String = objectResult.getString("Whatsapp")
-                    empresas.add(Taxi(nombre, logo, barrios, direccion, telefono.trim(), whatsapp.trim(), R.drawable.placeholder_image))
+                    val latitude = objectResult.getString("Latitud")
+                    val longitude = objectResult.getString("Longitud")
+
+                    val distancia = calcularDistancia(latitude, longitude)
+                    empresas.add(Taxi(nombre, logo, barrios, direccion, distancia, telefono.trim(), whatsapp.trim(), R.drawable.placeholder_image))
 
                 } catch (e: JSONException) {
                     e.printStackTrace()
@@ -93,12 +99,34 @@ class TaxisFragment : Fragment() {
         queue.add(jsonArrayRequest)
     }
 
+
     //ejecutamos la lista en el recyclerView
     private fun inicializaAdaptador() {
         mAdapter = AdapterRecyclerView(empresas)
         mRecyclerView.adapter = mAdapter
     }
+    private fun calcularDistancia(latitude: String, longitude: String): Double {
+        var distancia = 0.0
+        val latitude_user = "-17.4193507"
+        val longitude_user = "-66.1479929"
+        val lugar = "HOSPITAL HARRY WILLIAM"
 
+        try {
+            val location_user = Location(lugar)
+            location_user.latitude = java.lang.Double.parseDouble(latitude_user)
+            location_user.longitude = java.lang.Double.parseDouble(longitude_user)
+
+            val location_empresa = Location("Empresa")
+            location_empresa.latitude = java.lang.Double.parseDouble(latitude)
+            location_empresa.longitude = java.lang.Double.parseDouble(longitude)
+            distancia = location_user.distanceTo(location_empresa).toDouble()
+        } catch (e: Exception) {
+            distancia = 0.0
+        }
+
+        Log.e("DISTANCIA", "" + distancia)
+        return distancia
+    }
     override fun onCreateOptionsMenu(menu: Menu, menuInflater: MenuInflater) {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu_taxis, menu)

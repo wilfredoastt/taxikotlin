@@ -12,8 +12,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.taxikotlin.R
 import com.squareup.picasso.Picasso
+import java.text.DecimalFormat
 
 class AdapterRecyclerView(private val mDataSet: List<Taxi>) : RecyclerView.Adapter<AdapterRecyclerView.EmpresaViewHolder>() {
+
+    private var df = DecimalFormat("#.#")
 
     override fun onCreateViewHolder(parent: ViewGroup,
                                     viewType: Int): EmpresaViewHolder {
@@ -33,6 +36,7 @@ class AdapterRecyclerView(private val mDataSet: List<Taxi>) : RecyclerView.Adapt
         holder.tvTextDirection.text = taxi.direction
         holder.btnPhone.text = taxi.phone
         holder.btnWhatsapp.text = taxi.whatsapp
+        holder.tvTextDistance.text = (df.format(taxi.distance/1000)).toString().replace(",",".")+" Km"
 
 
         holder.btnPhone.setOnClickListener { v ->
@@ -72,7 +76,7 @@ class AdapterRecyclerView(private val mDataSet: List<Taxi>) : RecyclerView.Adapt
         val tvTextDirection: TextView
         val btnPhone: Button
         val btnWhatsapp: Button
-
+        val tvTextDistance: TextView
         init {
 
             imageView = itemView.findViewById(R.id.image_view)
@@ -81,6 +85,7 @@ class AdapterRecyclerView(private val mDataSet: List<Taxi>) : RecyclerView.Adapt
             tvTextDirection = itemView.findViewById(R.id.text_direction)
             btnPhone = itemView.findViewById(R.id.button_phone)
             btnWhatsapp = itemView.findViewById(R.id.button_whatsapp)
+            tvTextDistance = itemView.findViewById(R.id.text_distance)
         }
     }
 }

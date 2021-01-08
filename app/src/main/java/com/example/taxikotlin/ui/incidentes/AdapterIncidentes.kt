@@ -126,6 +126,7 @@ class AdapterIncidentes(private val mDataSet: List<Incidente>) : RecyclerView.Ad
             btnWhatsapp = itemView.findViewById(R.id.button_whatsapp)
             cardViewActive = itemView.findViewById(R.id.cardView_active)
             cardViewCancel = itemView.findViewById(R.id.cardView_cancel)
+
         }
     }
 
